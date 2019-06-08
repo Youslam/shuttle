@@ -10,7 +10,7 @@ function App() {
           <div className="header-left">
             <div className="logo-name">
               <a href="index.html"> <h1>Shoppy</h1>
-                <img id="logo" src="" alt="Logo" />
+                <img id="logo" src={logo} alt="Logo" />
 							  </a>
             </div>
 						<div className="search-box">
