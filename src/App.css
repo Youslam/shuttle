@@ -1517,22 +1517,7 @@ span.shoppy-rate h4 {
 
 background-color:#000;
 }
-/*--copyrights start here--*/
-.copyrights {
-    padding: 1.5em 1em;
-    text-align: center;
-    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.15);
-}
-.copyrights p {
-    font-size: 1em;
-    color: #000;
-}
-.copyrights p a{
-    color: #000;
-}
-.copyrights p a:hover{
-    color:#68AE00;
-}
+
 /*--grids start here--*/
 .cols-grids h2 {
     font-size: 2em;
@@ -4162,9 +4147,7 @@ h3#h3-bootstrap-heading {
 canvas#line {
     width: 350px !important;
 }
-.copyrights p {
-    font-size: 0.9em;
-}
+
 .float-left {
     float: none;
     width: 100%;
@@ -4479,9 +4462,7 @@ span.shoppy-rate h4 {
 .panel-body {
     padding: 10px;
 }
-.copyrights p {
-    font-size: 0.8em;
-}
+
 .btn-main-heading h2 {
     font-size: 1.6em;
     margin-bottom: 0.5em;
