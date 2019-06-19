@@ -2,6 +2,15 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 
 class Header extends Component {
+
+  constructor(props) {
+    super(props)
+    console.log(props);
+    this.state = {
+        username: props.username,
+    }
+  }
+
     render () {
         return (
                 <div className="header-main">
@@ -166,7 +175,7 @@ class Header extends Component {
                                             <div className="profile_img">
                                               <span className="prfil-img"><img src="images/p1.png" alt=""/> </span>
                                                 <div className="user-name">
-                                                  <p>Malorum</p>
+                                                  <p>{this.state.username}</p>
                                                   <span>Administrator</span>
                                                 </div>
                                                 <i className="fa fa-angle-down lnr"></i>
