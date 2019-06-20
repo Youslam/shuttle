@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
+import React, {Component} from 'react';
+import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import Footer from './components/common/footer/Footer';
 import Header from './components/common/header/Header';
 import MainContent from './components/common/content/MainContent';
@@ -47,15 +47,6 @@ class ListTodosComponent extends Component {
     }
 }
 
-
-class WelcomeComponent extends Component {
-    render() {
-        return <div>
-                    Welcome {this.props.match.params.name}. You can manage your todos <Link to="/shuttle">here</Link>.
-                </div>
-    }
-}
-
 function ErrorComponent() {
     return <div>An Error Occurred. I don't know what to do! Contact support at abcd-efgh-ijkl</div>
 }
@@ -98,14 +89,52 @@ class LoginComponent extends Component {
 
     render() {
         return (
-            <div>
-                {/*<ShowInvalidCredentials hasLoginFailed={this.state.hasLoginFailed}/>*/}
-                {this.state.hasLoginFailed && <div>Invalid Credentials</div>}
-                {this.state.showSuccessMessage && <div>Login Sucessful</div>}
-                {/*<ShowLoginSuccessMessage showSuccessMessage={this.state.showSuccessMessage}/>*/}
-                User Name: <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
-                Password: <input type="password" name="password" value={this.state.password}  onChange={this.handleChange}/>
-                <button onClick={this.loginClicked}>Login</button>
+        //    <div>
+        //         {/*<ShowInvalidCredentials hasLoginFailed={this.state.hasLoginFailed}/>*/}
+        //         {this.state.hasLoginFailed && <div>Invalid Credentials</div>}
+        //         {this.state.showSuccessMessage && <div>Login Sucessful</div>}
+        //         {/*<ShowLoginSuccessMessage showSuccessMessage={this.state.showSuccessMessage}/>*/}
+        //         User Name: <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
+        //         Password: <input type="password" name="password" value={this.state.password}  onChange={this.handleChange}/>
+        //         <button onClick={this.loginClicked}>Login</button>
+        //     </div>
+
+            <div className="login-page">
+                <div className="login-main">  	
+                    <div className="login-head">
+                            <h1>Login</h1>
+                        </div>
+                        <div className="login-block">
+                            <form>
+                                <input type="text" name="username" placeholder="Username" value={this.state.username} onChange={this.handleChange}/>
+                                <input type="password" name="password" className="lock" placeholder="Password" value={this.state.password}  onChange={this.handleChange}/>
+                                <div className="forgot-top-grids">
+                                    <div className="forgot-grid">
+                                        <ul>
+                                            <li>
+                                                <input type="checkbox" id="brand1" value="" />
+                                                <label for="brand1"><span></span>Remember me</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className="forgot">
+                                        <a href="#">Forgot password?</a>
+                                    </div>
+                                    <div className="clearfix"> </div>
+                                </div>
+                                <input type="submit" name="Sign In" value="Login" onClick={this.loginClicked}/>	
+                                <h3>Not a member?<a href="signup.html"> Sign up now</a></h3>				
+                                <h2>or login with</h2>
+                                <div className="login-icons">
+                                    <ul>
+                                        <li><a href="#" className="facebook"><i className="fa fa-facebook"></i></a></li>
+                                        <li><a href="#" className="twitter"><i className="fa fa-twitter"></i></a></li>
+                                        <li><a href="#" className="google"><i className="fa fa-google-plus"></i></a></li>						
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+                </div>
             </div>
         )
     }
